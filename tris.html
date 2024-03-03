@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>Tris Online</title>
+        <link rel="icon" type="image/x-icon" href="Other/favicon.jpg">
+        <script src="script.js"></script>
+    </head>
+    <body style="background-image: url('Other/matrix.gif');">
+        <script>
+            memset();
+            dp();
+        </script>
+        <div align="center" style="font-family: courier; color:white">
+            <p style="margin-top: 15px; margin-bottom: 15px; font-size: 48; font-weight: bold;">Gioco del Tris</p>
+            <p style="margin-top: 15px; margin-bottom: 15px; font-size: 24;">Il tris (noto anche come Tic-Tac-Toe in inglese) è un popolarissimo gioco di carta e matita astratto a informazione perfetta. Si gioca su una griglia quadrata di 3×3 caselle.<br>A turno, i giocatori scelgono una cella vuota e vi disegnano il proprio simbolo (di solito un giocatore ha come simbolo una "X" e l'avversario un cerchio). Vince il giocatore che riesce a disporre tre dei propri simboli in linea retta orizzontale, verticale o diagonale. Se la griglia viene riempita senza che nessuno dei giocatori sia riuscito a completare una linea retta di tre simboli, il gioco finisce in parità. Nel caso in cui il gioco finisse in parità, la partita è detta "patta".<br>Per iniziare una partita seleziona la modalità di gioco con gli appositi bottoni, dopodichè inserisci il nome/i del/i giocatore/i e inizia a giocare. Nel caso di una partita contro la CPU potrai scegliere se iniziare per primo (con la "X") o per secondo (con la "O").</p>
+            <img ondragstart="return false;" src="Other/multi.png" onClick="init(0)">
+            <img ondragstart="return false;" src="Other/random.png" onClick="mostra(1)">
+            <img ondragstart="return false;" src="Other/cpu.png" onClick="mostra(2)">
+            <br>
+            <img id="X" ondragstart="return false;" onClick="init(1)">
+            <img id="O" ondragstart="return false;" onClick="init(2)">
+            <br>
+            <label id="l1" for="p1"></label>
+            <input type="text" id="p1" onkeyup="aggiorna()" style="visibility: hidden; width: 0px; height: 0px;">
+            <label id="l2" for="p2"></label>
+            <input type="text" id="p2" onkeyup="aggiorna()" style="visibility: hidden; width: 0px; height: 0px;">
+            <p id="turno"> </p>
+            <table>
+                <tr>
+                    <td><img id="q0" ondragstart="return false;" onmouseover="cambia(0)" onmouseout="torna(0)" onclick="assegna(0)"></td>
+                    <td><img id="q1" ondragstart="return false;" onmouseover="cambia(1)" onmouseout="torna(1)" onclick="assegna(1)"></td>
+                    <td><img id="q2" ondragstart="return false;" onmouseover="cambia(2)" onmouseout="torna(2)" onclick="assegna(2)"></td>
+                </tr>
+                <tr>
+                    <td><img id="q3" ondragstart="return false;" onmouseover="cambia(3)" onmouseout="torna(3)" onclick="assegna(3)"></td>
+                    <td><img id="q4" ondragstart="return false;" onmouseover="cambia(4)" onmouseout="torna(4)" onclick="assegna(4)"></td>
+                    <td><img id="q5" ondragstart="return false;" onmouseover="cambia(5)" onmouseout="torna(5)" onclick="assegna(5)"></td>
+                </tr>
+                <tr>
+                    <td><img id="q6" ondragstart="return false;" onmouseover="cambia(6)" onmouseout="torna(6)" onclick="assegna(6)"></td>
+                    <td><img id="q7" ondragstart="return false;" onmouseover="cambia(7)" onmouseout="torna(7)" onclick="assegna(7)"></td>
+                    <td><img id="q8" ondragstart="return false;" onmouseover="cambia(8)" onmouseout="torna(8)" onclick="assegna(8)"></td>
+                </tr>
+            </table>
+            <p id="vincitore" style="display: inline-block; font-size: 48; font-weight: bold; background-color: black"> </p>
+        </div>
+    </body>
+</html>
